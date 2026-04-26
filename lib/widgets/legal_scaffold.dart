@@ -22,19 +22,26 @@ class LegalScaffold extends StatelessWidget {
         backgroundColor: const Color(0xFF6B4EFF),
         foregroundColor: Colors.white,
         elevation: 0,
-        title: Row(
-          children: [
-            Image.network(
-              'https://lumify-app.com/logo.png',
-              height: 28,
-              errorBuilder: (context, error, stack) => const Icon(Icons.book, color: Colors.white, size: 28),
-            ),
-            const SizedBox(width: 10),
-            const Text(
-              'Lumify',
-              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-            ),
-          ],
+        title: GestureDetector(
+          onTap: () => context.go('/'),
+          child: Row(
+            children: [
+              Container(
+                width: 32,
+                height: 32,
+                decoration: BoxDecoration(
+                  color: Colors.white.withAlpha(30),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(Icons.auto_stories_rounded, color: Colors.white, size: 18),
+              ),
+              const SizedBox(width: 10),
+              const Text(
+                'Lumify',
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+              ),
+            ],
+          ),
         ),
         actions: [
           TextButton(
