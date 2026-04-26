@@ -1,11 +1,11 @@
 {
-    "name": "lumify_legal",
-    "short_name": "lumify_legal",
+    "name": "Lumify — Devocional Cristão",
+    "short_name": "Lumify",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#131110",
+    "theme_color": "#131110",
+    "description": "Aproxime-se de Deus. Todos os dias.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
