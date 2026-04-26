@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:go_router/go_router.dart';
 
 import 'screens/home_screen.dart';
@@ -6,7 +7,10 @@ import 'screens/terms_screen.dart';
 import 'screens/privacy_screen.dart';
 import 'screens/not_found_screen.dart';
 
-void main() => runApp(const LumifyApp());
+void main() {
+  usePathUrlStrategy();
+  runApp(const LumifyApp());
+}
 
 final _router = GoRouter(
   initialLocation: '/',
