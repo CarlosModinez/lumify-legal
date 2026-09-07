@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+# Links de divulgação (manager → Links): lumify-app.com/go/<slug> encaminha
+# para a API, que identifica o aparelho, registra o clique e manda para a
+# loja certa. Redirect (não proxy): a Hostinger compartilhada não faz proxy,
+# e o redirect preserva User-Agent e IP do visitante para a atribuição.
+RewriteRule ^go/([A-Za-z0-9-]{1,40})/?$ https://api.lumify-app.com/go/$1 [R=302,L,NE]
+
+# SPA: qualquer outra rota cai no index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
